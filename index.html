@@ -575,7 +575,8 @@ from pandas.tseries.api import *
 from pandas.core.computation.api import *
 from pandas.core.reshape.api import *</code></pre></div>
 
-<p>One thing to note here are the periods. <code>pandas.core.api</code> etc. and the <code>*</code>. In bash an <code>*</code> is a glob and symbolizes a wild-card that represents all the possibilities available. It means the same thing here. Below you will see the directory and file structure for the pandas module (only 1st level). About 25 sub-directories, note <code>core</code> and <code>tseries</code> which we just saw above. The dot notation in a pandas import statement takes the place of file path sparators &#39;/&#39;. </p>
+<p>One thing to note here are the periods. <code>pandas.core.api</code> etc. and the <code>*</code>. In bash an <code>*</code> is a glob and symbolizes a wild-card that represents all the possibilities available. It means the same thing here. Below you will see the directory and file structure for the pandas module (only 1st level). About 25 sub-directories, note <code>core</code> and <code>tseries</code> which we just saw above. The dot notation in a pandas import statement
+	<code>__file__</code> attribute is a time saver as it returns the path to the pandas module. Without this path we might have to look through every directory in $PYTHONPATH to find the module. We can use this path to open the source code to the pandas library. The other thing that is interesting to note is that file that gets stored in the <code>__file__</code> attribute is an <code>/</code>;. </p>
 
 <div><pre class="line-numbers"><code class="language-command-line">$ tree -L 1 /Users/loaner/anaconda3/lib/python3.6/site-packages/pandas
 ├── __init__.py
